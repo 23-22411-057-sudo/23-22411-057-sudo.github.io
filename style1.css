@@ -1,0 +1,109 @@
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, var(--bg-start), var(--bg-end));
+    color: var(--text-color);
+    transition: all 0.4s ease-in-out;
+}
+
+/* CV Box */
+.cv-container {
+    background-color: var(--card-bg);
+    text-align: center;
+    width: 90%;
+    max-width: 750px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    padding: 40px;
+    backdrop-filter: blur(8px);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Headings */
+header h1 {
+    font-size: 2.5em;
+    color: var(--accent-color);
+}
+
+.subtitle {
+    font-size: 1.1em;
+    color: var(--secondary-text);
+    margin-bottom: 20px;
+}
+
+h2 {
+    border-bottom: 2px solid var(--accent-color);
+    display: inline-block;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    color: var(--accent-color);
+}
+
+/* Paragraphs & Lists */
+p, li {
+    font-size: 1em;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li::before {
+    content: "• ";
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+/* Links */
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    margin-top: 30px;
+    font-size: 0.9em;
+    color: var(--secondary-text);
+}
+
+/* 🌞 Light Mode */
+@media (prefers-color-scheme: light) {
+    :root {
+        --bg-start: #a1c4fd;
+        --bg-end: #c2e9fb;
+        --card-bg: rgba(255, 255, 255, 0.9);
+        --text-color: #222;
+        --secondary-text: #555;
+        --accent-color: #0066cc;
+    }
+}
+
+/* 🌙 Dark Mode */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-start: #141e30;
+        --bg-end: #243b55;
+        --card-bg: rgba(30, 30, 30, 0.85);
+        --text-color: #f5f5f5;
+        --secondary-text: #bbbbbb;
+        --accent-color: #5eb8ff;
+    }
+}
